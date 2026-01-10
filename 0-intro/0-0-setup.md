@@ -120,15 +120,6 @@ You'll need to create an account:
 3. Make sure to use your **@syr.edu** email for the account.
 4. Add your personal email when you're at it so you don't lose Github access after you graduate!
 
-### Backpack Access
-
-1. Go to the Github Backpack site:  https://education.github.com/pack  
-and click **Sign Up For Student Developer Pack**
-2. Once your account is verified, you will have backpack access.
-3. You'll know its active when you check your billing plan: https://github.com/settings/billing/summary   
-you should see a credit here.
-4. Once you have backpack access, you can enable Github Copilot AI. https://github.com/settings/copilot 
-
 
 ## Step 3: Configure VS Code
 
