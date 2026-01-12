@@ -156,7 +156,7 @@ The last step is to configure VS Code for Python debugging. Provided everything 
 2. Clone the IST356 master code repository:
     1. Click the "Explorer" Icon in the Activity Bar
     2. Click "Clone Repository" button
-    3. In the search bar type https://github.com/auramnar/ist356fall25
+    3. In the search bar type https://github.com/auramnar/ist356SP26
     4. Check to ensure your environment works.
 3. Configure your Github
     1. Open a new terminal in VSCode
