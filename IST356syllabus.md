@@ -154,6 +154,36 @@ The following grading scale translates your total points earned into a letter gr
 
 Based on the assignments in this course and our specified learning outcomes, the full use of artificial intelligence as a tool, with disclosure and citation, is permitted in this course. Students do not need to ask permission to use these tools before starting an assignment or exam, but they must explicitly and fully indicate which tools were used and describe how they were used.
 
+### Course Honor Code - Academic Integrity
+What Does Academic Integrity Mean In This Course?
+
+The course honor code represents our commitment to Academic Integrity in a programming course. I drafted the class honor code to avoid academic negligence - situations where students are unaware that their actions are actually a form of cheating. Our honor code remedies this problem by clearly stating the expectations of Academic Integrity for this course. It states:
+
+1. All work is my own. Answers on all student work, assignments (labs, homework, problem sets, projects, papers, etc…) and assessments (quizzes, exams, tests, etc…) are my own individual work (except where collaboration is explicitly allowed and disclosed). In the case where collaboration is permitted I will only collaborate within my team. Your own work means it manifests your own thoughts and ideas, not someone else’s. AI is included in the “someone else.”
+2. I will not share answers. I will not make answers (either my own or the professor’s) to work, assignments (labs, problem sets, projects, papers, homework, etc…) and assessments (quizzes, exams, tests, etc…) available to anyone else in or out of class. This includes posting them on the web / chegg / course hero, or sharing them in test banks.
+3. I will not misrepresent my ability. I will not engage in any activity which misrepresents or falsifies my knowledge of the subject matter and therefore improves my grade dishonestly. This includes unsanctioned test aids, copying homework, and assistance from unapproved sources outside of class. This includes passing off AI output as your own work.
+4. I will give credit. I will always pay attribution to my sources, and not misrepresent the works of others as my own. If you get code from the internet, a tutor, or an AI assistant, you must cite it like you would any source in an academic paper. If you used AI, disclose that.
+5. I accept the honor code and its consequences. I understand and accept that that all work I submit is subject to the honor code, and if I violate this honor code I my instructor is obligated to report me to the University’s office of 
+Academic Integrity.
+
+This can be easily summarized as: **If code you are submitting did not originate from you, you must clearly disclose where it came from** .
+
+When in doubt, ask. When unsure, disclose openly. Most students who get into trouble are trying to hide their academic dishonesty. Don’t do that. We will catch you easily.
+
+### Sanctions for Violations of Academic Integrity
+Oops. I violated academic integrity. What now?
+
+- All suspected academic integrity violation will be reported to the university’s office of academic integrity.
+- Proposed sanction for violations of a low-stakes assessment such as a homework assignment or lab, is **a grade of zero**.
+- Proposed sanction for any violation on a summative assessment such as an exam or the final project is **a grade of F in the course**.
+
+### Syracuse University Policies
+Syracuse University has a variety of other policies designed to guarantee that students live and study in a community respectful of their needs and those of fellow students. These policies apply to this course and can be found at this URL:
+
+<https://academicaffairs.syracuse.edu/important-syllabus-reminders/>
+
+
+
 ## Class Schedule
 
 | Week | Monday Class | Wednesday Class | Assignment Due|
@@ -163,29 +193,29 @@ Based on the assignments in this course and our specified learning outcomes, the
 | 2 | 1/19 | 1/21 | 1/25 |
 |   | No Class: MLK Day | Python 1-2 | Assignment 1 (A1) |
 | 3 | 1/26 | 1/28 | 2/1 |
-|   | Python 1-3 | Python 1-4 | Assignment 2 (A2) |
+|   | Python 1-3 | Python 1-4 | Practice |
 | 4 | 2/2 | 2/4 | 2/8 |
-|   | UI 2.1 | UI 2.2 | Assignment 3 (A3) |
+|   | UI 2.1 | UI 2.2 | Assignment 2 (A2) |
 | 5 | 2/9 | 2/11 | 2/15 |
-|   | Data Wrangling 3-1 | Data Wrangling 3-2 | Assignment 4 (A4) |
+|   | Data Wrangling 3-1 | Data Wrangling 3-2 | Practice |
 | 6 | 2/16 | 2/18 | 2/22 |
-|   | Data Wrangling 3-3 | Data Wrangling 3-4 | Assignment 5 (A5) |
+|   | Data Wrangling 3-3 | Data Wrangling 3-4 | Assignmen3 (A3) |
 | 7 | 2/23 | 2/25 | 3/1 |
-|   | Data Wrangling 3-5 | Data Wrangling 3-6 | Assignment 6 (A6) |
+|   | Data Wrangling 3-5 | Data Wrangling 3-6 | Practice |
 | 8 | 3/2 | 3/4 | 3/8 |
-|   | Web APIs 4-1 | Web APIs 4-2 | Assignment 7 (A7) |
+|   | Web APIs 4-1 | Web APIs 4-2 | Assignment 4 (A4) |
 | 9 | 3/9 | 3/10 | 3/15 |
 |   |  No Class: Spring Break | No Class: Spring Break |  |
 | 10 | 3/16 | 3/18 | 3/22 |
-|   | Web APIs 4-3 | Exam1/Web APIs 4-4 | Assignment 8 (A8) |
+|   | Web APIs 4-3 | Exam1/Web APIs 4-4 | Project Proposal |
 | 11 | 3/23 | 3/25 | 3/29 |
-|    | Web Scraping 5-1 | Web Scraping 5-2 | Assignment 9 (A9) |
+|    | Web Scraping 5-1 | Web Scraping 5-2 | Assignment 5 (A5) |
 | 12 | 3/30 | 4/1 | 4/5 |
-|   | Web Scraping 5-3 | Web Scraping 5-4 | Assignment 10 (A10) |
+|   | Web Scraping 5-3 | Web Scraping 5-4 | Assignment 6 (A6) |
 | 13 | 4/6 | 4/8 | 4/12 |
-|   | Data Visualization 6-1 | Data Visualization 6-2  | Assignment 11 (A11) |
+|   | Data Visualization 6-1 | Data Visualization 6-2  | Assignment 7 (A7) |
 | 14 | 4/13 | 4/15 | 4/19 |
-|   | Data Visualization 6-3 | Data Visualization 6-4 | Assignment 12 (A12) |
+|   | Data Visualization 6-3 | Data Visualization 6-4 | Assignment 8 (A8) |
 | 15 | 4/20 | 4/22 | 4/26 |
 |   | Data Visualization 6-5 | Data Visualization | Project Draft Deliverable  |
 | 16 | 4/27 | 4/30 | 5/5 |

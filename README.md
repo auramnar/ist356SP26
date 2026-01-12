@@ -1,10 +1,10 @@
-# ist356SP26
+# IST356SP26
 ## Course Repository for IST356
 
 
 ## Contents:
 
-- Syllabus: `syllabus.md` 
+- Syllabus: `IST356syllabus.md` 
 - Course Setup Information: `0-intro` folder
 - Course topics in each numbered folder: `1-python, 2-ui, 3-data` etc...
 
