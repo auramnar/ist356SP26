@@ -96,11 +96,22 @@ As you set it up, you will be asked several questions, for which the default sel
 3. **Python 3**: 
 Do not download the latest recommended Python 3 version. For maximum stability and compatability with other code, you'll want to download the download the highest security release. As of Fall 2024, that's Python 3.11. Here is the direct link https://www.python.org/downloads/release/python-3110/
 
-Run the installer (make sure to check “Add Python to PATH”)
+Run the installer (make sure to check “Add Python to PATH”). PATH is an environment variable. It basically tells the commandline what folders to look in when attempting to find a file.
 
 ![Add to PATH](pythoninstall.png)
 
-See Resources for Setup on Blackboard for more details. I strongly recommend you review. 
+CHECK the installed Python version ...
+
+Open your command prompt (Windows), PowerShell (Windows), or terminal (macOS/Linux) and enter one of the following commands. The output will display the installed version
+
+- python --version
+- python -V
+
+If those commands do not work, or if you have multiple versions installed, you can try:
+- python3 --version (On macOS)
+- py --version (On Windows)
+
+**See Resources for Setup on Blackboard for more details. I strongly recommend you review.** 
 
 
 ## Setup 2: Github Account
@@ -124,6 +135,15 @@ You'll need to create an account:
 3. Make sure to use your **@syr.edu** email for the account.
 4. Add your personal email when you're at it so you don't lose Github access after you graduate!
 
+CHECK Git Version 
+
+Open your terminal application:
+- Windows: Search for Command Prompt, PowerShell.
+- macOS: Open the Terminal application
+Type the following command  git --version
+
+If Git is installed, you will see a version number
+If Git is not installed, you will see a message like 'git' is not recognized as an internal or external command or git: command not found.  In this case, you will need to install Git from the official website. 
 
 ## Step 3: Configure VS Code
 
