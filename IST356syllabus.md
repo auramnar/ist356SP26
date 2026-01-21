@@ -189,11 +189,11 @@ Syracuse University has a variety of other policies designed to guarantee that s
 | Week | Monday Class | Wednesday Class | Assignment Due|
 |-----|-----|-----|-----|
 | 1 | 1/12 | 1/14 | 1/18 |
-|   | Course Introduction | Python 1-1 |  |
+|   | Course Introduction | Class Setup |  |
 | 2 | 1/19 | 1/21 | 1/25 |
-|   | No Class: MLK Day | Python 1-2 | Assignment 1 (A1) |
+|   | No Class: MLK Day | Python 1- 1 and 2 | Practice |
 | 3 | 1/26 | 1/28 | 2/1 |
-|   | Python 1-3 | Python 1-4 | Practice |
+|   | Python 1-3 | Python 1-4 | CHECKPOINT I/Assignment 1 (A1) |
 | 4 | 2/2 | 2/4 | 2/8 |
 |   | UI 2.1 | UI 2.2 | Assignment 2 (A2) |
 | 5 | 2/9 | 2/11 | 2/15 |
@@ -207,7 +207,7 @@ Syracuse University has a variety of other policies designed to guarantee that s
 | 9 | 3/9 | 3/10 | 3/15 |
 |   |  No Class: Spring Break | No Class: Spring Break |  |
 | 10 | 3/16 | 3/18 | 3/22 |
-|   | Web APIs 4-3 | Exam1/Web APIs 4-4 | Project Proposal |
+|   | Web APIs 4-3 | Exam1/Web APIs 4-4 | CHECKPOINT II/Project Proposal |
 | 11 | 3/23 | 3/25 | 3/29 |
 |    | Web Scraping 5-1 | Web Scraping 5-2 | Assignment 5 (A5) |
 | 12 | 3/30 | 4/1 | 4/5 |
@@ -217,7 +217,7 @@ Syracuse University has a variety of other policies designed to guarantee that s
 | 14 | 4/13 | 4/15 | 4/19 |
 |   | Data Visualization 6-3 | Data Visualization 6-4 | Assignment 8 (A8) |
 | 15 | 4/20 | 4/22 | 4/26 |
-|   | Data Visualization 6-5 | Data Visualization | Project Draft Deliverable  |
+|   | Data Visualization 6-5 | Data Visualization | CHECKPOINT III/Project Draft Deliverable  |
 | 16 | 4/27 | 4/30 | 5/5 |
 |   | Exam 2 | Project  |  Project |
 | 17 | 5/5 | 5/7 | 5/10 |
