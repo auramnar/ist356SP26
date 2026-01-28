@@ -32,9 +32,11 @@ while True:
     
     qty = int(input("Enter the quantity:"))
     if item in items.keys(): # check if in dictionary
+        print(f"{item} found in list, updating quantity")
         items[item] = items[item] + qty # update quantity
     else:
-        items[item] = qty # item not foung so add new key:value pair
+        items[item] = qty # item not found so add new key:value pair
+        print(f"{item} added to the list with quantity {qty}")
     print("ITEMS:", items ) #print after update
 print("Final shopping list:", items) # print after exiting 
 

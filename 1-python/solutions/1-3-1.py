@@ -14,7 +14,15 @@ def average(list_nums:list)->int:
     This function that a takes items in a list of numbers 
     and calculates average. 
     This returns an estimate rounded down integer. 
-    
+   
     '''
+    # do something
+    total = sum(list_nums)
+    count = len(list_nums)
+    return total//count
+
+nums = [10, 20, 10, 5]
+avg = average(nums)
+print(f"Average of {nums} is {avg}")
 
 
