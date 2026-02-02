@@ -10,9 +10,20 @@ You will need to read through the module with `dir()` and `help()` or read the p
 '''
 
 
+
+
 from datetime import datetime, timedelta
 
 today = datetime.now()
 print(today)
 print(today.day)
 
+birthday = "1/15/2025"
+test = datetime.strptime(birthday, "%m/%d/%Y")
+test = test + timedelta(days =1)
+print(test)
+
+"Monday January 15, 2025"
+
+test_str = test.strftime("%A, %B %d %Y")
+print(test_str)
