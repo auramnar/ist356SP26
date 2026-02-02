@@ -9,8 +9,10 @@ For example in the current date is January 15, 2025 the output should be 2025-01
 You will need to read through the module with `dir()` and `help()` or read the python docs to determine which functions to use.
 '''
 
+
 from datetime import datetime
 
 today = datetime.now()
 print(today)
 print(today.day)
+
