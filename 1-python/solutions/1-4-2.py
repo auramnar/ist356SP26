@@ -10,6 +10,3 @@ re-write the main program to use both functions. input -> parsedate -> formatdat
 
 from datetime import datetime
 
-
-
-

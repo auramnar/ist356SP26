@@ -1,1 +1,5 @@
 pytest
+ipywidgets
+streamlit
+pandas
+numpy
