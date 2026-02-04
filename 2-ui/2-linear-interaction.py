@@ -10,7 +10,7 @@ clear_clicked = st.button('Clear')
 # interactions
 if hi_clicked:
     if name:
-        st.success(f"Hello, {name}", icon="👍")
+        st.success(f"Hello, {name}", icon="👍" )
     else:
         st.error(f"I can't say hello, if you don't tell me your name!", icon="💣")
 
