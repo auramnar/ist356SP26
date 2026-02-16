@@ -199,7 +199,7 @@ Syracuse University has a variety of other policies designed to guarantee that s
 | 5 | 2/9 | 2/11 | 2/15 |
 |   | Data Wrangling 3-1 | Data Wrangling 3-2 | Practice |
 | 6 | 2/16 | 2/18 | 2/22 |
-|   | Data Wrangling 3-3 | Data Wrangling 3-4 | Assignmen3 (A3) |
+|   | Data Wrangling 3-3 | Data Wrangling 3-4 | Assignment 3 (A3) |
 | 7 | 2/23 | 2/25 | 3/1 |
 |   | Data Wrangling 3-5 | Data Wrangling 3-6 | Practice |
 | 8 | 3/2 | 3/4 | 3/8 |
