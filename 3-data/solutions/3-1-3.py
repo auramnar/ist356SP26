@@ -9,6 +9,8 @@ st.dataframe(customers)
 
 radio = st.radio('Gender:', options=['M', 'F'], index =0) # M as the default
 cols = st.multiselect('Columns:', options=customers.columns) # select columns
+#creates a dropdown for selecting multiple columns
 gender_index = customers['Gender'] == radio # Boolean mask correspond to radio button.
 #if user select male then will return True for all rows where gender is M
 st.dataframe(customers[gender_index][cols])
+# filter and display data
