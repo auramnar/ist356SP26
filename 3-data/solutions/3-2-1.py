@@ -7,5 +7,10 @@ st.title("Webtraffic Data")
 
 link = 'https://raw.githubusercontent.com/mafudge/datasets/refs/heads/master/delimited/webtraffic.log'
 
-wt= pd.read_csv(link, sep='\s+',skiprows=3,header=0)
+wt= pd.read_csv(link, sep=' ',skiprows=3,header=0)
 st.dataframe(wt)
+
+# Filtering data
+wt_filter = (wt['sc-status'] == 200) & (wt['time-taken']>500)
+wt_slow = wt[wt_filter]
+st.dataframe(wt_slow)
