@@ -2,7 +2,7 @@ import pandas as pd
 import requests
 import streamlit as st
 
-APIKEY = "ec25dc1e1297cfba51838bd3"
+APIKEY = "8fe085f6a8b8733c7cff9b0b"
 st.title("Query It")
 
 file = st.file_uploader("Upload a CSV file", type=["csv"])

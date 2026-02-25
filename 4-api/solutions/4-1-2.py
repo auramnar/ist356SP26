@@ -14,6 +14,9 @@ import pandas as pd
 import streamlit as st
 
 
-st.title("Funny Name Search")
+#st.title("Funny Name Search")
 
-url = "https://cent.ischool-iot.net/api/funnyname/search"
+#url = "https://cent.ischool-iot.net/api/funnyname/search"
+
+
+
