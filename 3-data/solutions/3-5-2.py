@@ -12,10 +12,14 @@ Let's build an interactive pivot table in streamlit!
 
 '''
 
-import numpy as np
+
 import pandas as pd
 import streamlit as st
-import pandas as pd
+
 
 url = "https://raw.githubusercontent.com/mafudge/datasets/refs/heads/master/exam-scores/exam-scores.csv"
+exams = pd.read_csv(url)
+st.write("Raw Exam Scores Data")
+st.dataframe(exams)
+
 

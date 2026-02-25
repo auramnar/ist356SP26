@@ -35,10 +35,11 @@ st.dataframe(checks)
 
 
 # Get KPI boundaries
-ppp_75 = checks['price_per_person'].quantile(0.75)
+ppp_75 = checks['price_per_person'].quantile(0.75) # gives me the 75th percentile for price/person
 ipp_75 = checks['items_per_person'].quantile(0.75)
-#tp_75 = ???
-#tp_25 = ???
+tp_75 = checks['tip_percentage'].quantile(0.75)
+tp_25 = checks['tip_percentage'].quantile(0.25)
+
 
 # Calculate the KPIs
 

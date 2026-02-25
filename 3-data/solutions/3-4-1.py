@@ -29,3 +29,25 @@ checks = pd.read_csv(url)
 st.write("Raw Data")
 st.dataframe(checks)
 
+# clean the `total amount of check` and `gratuity` columns
+# transformations
+checks['total_amount_of_check_cleaned'] = checks['total amount of check'].apply(clean_currency)
+checks['gratuity_cleaned'] = checks['gratuity'].apply(clean_currency)
+
+# Calculations 
+checks['price_per_item'] = checks['total_amount_of_check_cleaned'] / checks['total items on check']
+checks['price_per_person'] = checks['total_amount_of_check_cleaned'] / checks['party size']
+checks['items_per_person'] = checks['total items on check'] / checks['party size']
+checks['tip_percentage'] = checks['gratuity_cleaned'] / checks['total_amount_of_check_cleaned'] 
+
+st.write("Transformed Data")
+st.dataframe(checks)
+
+col1, col2, col3, col4 = st.columns(4)
+col1.metric("Average Price Per Item", checks['price_per_item'].mean())
+col2.metric("Average Price Per Person", checks['price_per_person'].mean())
+col3.metric("Average Items Per Person", checks['items_per_person'].mean())  
+col4.metric("Average Tip Percentage", checks['tip_percentage'].mean())
+
+st. write("Summary Statistics")
+st.dataframe(checks.describe())
