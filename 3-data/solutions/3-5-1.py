@@ -19,4 +19,3 @@ exams = pd.read_csv(url)
 st.write("Raw Exam Scores Data")
 st.dataframe(exams)
 
-
