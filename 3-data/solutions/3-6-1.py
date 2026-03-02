@@ -67,46 +67,73 @@ for date in dates: # loop runs once for each date in the dates list
 
 # TODO:
 # Combine all the poll responses into one dataframe
+poll_df = pd.concat(polls, ignore_index=True)  
+st.write("Combined Poll Data")
+st.dataframe(poll_df)
+st.write("Roster Data")
+st.dataframe(roster_df)
 
 
 # TODO:
 # Transformation 
 # Join the poll responses to the roster
+combined_df = pd.merge(roster_df, poll_df, how='left', left_on='netid', right_on='student_id')
+st.write("Combined Roster and Poll Data")
+st.dataframe(combined_df)
 
 # TODO:
 # Determine the max poll count for each date using a pivot table
+poll_counts = combined_df.pivot_table(index ='date', values ='poll_num', aggfunc='max')
+st.write("Max Poll Count for Each Date")
+st.dataframe(poll_counts)
+
 
 # TODO:
 # Count the number of responses by date for each student using a pivot table. 
 # Use fillna(0) to replace any missing values with 0 since if there is no response.
+student_responses = combined_df.pivot_table(index='netid', columns='date', values='answer', aggfunc='count')
+student_responses= student_responses.fillna(0)
+st.write("Number of Responses by Date for Each Student")
+st.dataframe(student_responses)
 
 # TODO:
 # We now need to create a new dataframe where we will convert the number of polls answered into a grade.
 # copy student_responses to a new dataframe.
 # Here is an example ...
 
-'''
+
 student_responses2 = student_responses.copy() # copy() ensures we don't overwrite the original student_responses dataframe
 # change student poll responses to percentages
 for col in student_responses2.columns:
     student_responses2[col] = student_responses2[col] / poll_counts.loc[col, 'poll_num']
 # student_responses2[col]. This line accesses the column in the student_responses2 dataframe 
 # poll_counts.loc[col, 'poll_num'] means
-Look in poll_counts
-Find the row with index col
-Get the value from column 'poll_num'
-Change the poll responses to percentages
-'''
+#Steps
+#Look in poll_counts
+#Find the row with index col
+#Get the value from column 'poll_num'
+#Change the poll responses to percentages
+
 # TODO:
 # Apply the a grade attendance function that return a grade based on the number of polls a student participated
 # You will replace every original data point in copied responses by the output of grade_attendance function when applied to values.
 # The percentages will be converted to grades
 # display the dataframe
 
+for col in student_responses2.columns:
+    student_responses2[col] = student_responses2[col].apply(grade_attendance)
+
+st.write
+st.dataframe(student_responses2)
+
 # TODO:
 # Make a copy of this dataframe with the grades
 # Calculate the total sessions
 # display the dataframe
+summary = student_responses2.copy()
+summary['sessions'] = len(summary.columns) # calculate total sessions
+st.write("Summary DataFrame with Grades and Total Sessions")
+st.dataframe(summary)
 
 # TODO:
 # use row.value_counts() to count the number of AB and np in each row
@@ -116,9 +143,18 @@ Change the poll responses to percentages
 # Calculate the percentage of sessions that are AB or np
 # display this summary dataframe
 
+summary['AB'] = summary.apply(lambda row: row.value_counts().get('AB', 0), axis=1)
+summary['np'] = summary.apply(lambda row: row.value_counts().get('np', 0), axis=1)
+summary['pct'] = (summary['AB'] + summary['np']) / summary['sessions']
+st.write("Summary DataFrame with AB and np Counts and Percentage")
+st.dataframe(summary)
+
 # TODO:
 # merge summary with roster to get student names
 # use the netid column from roster_df and the index from summary dataframe to merge
+summary_with_names = pd.merge(roster_df, summary, left_on='netid', right_index=True)
+st.dataframe(summary_with_names)
 
 # TODO:
 #create a download button. define MIME type to be downloaded is a csv file
+st.download_button("Download csv", data=summary_with_names.to_csv(), file_name='polling_report', mime='text/csv')

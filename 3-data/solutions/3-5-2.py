@@ -22,4 +22,15 @@ exams = pd.read_csv(url)
 st.write("Raw Exam Scores Data")
 st.dataframe(exams)
 
+cols = ['Class_Section', 'Exam_Version', 'Made_Own_Study_Guide', 'Did_Exam_Prep Assignment', 'Studied_In_Groups','Letter_Grade']
+measures = ['Completion_Time','Student_Score']
 
+row_select = st.selectbox('Select Row', cols)
+cols.remove(row_select) # remove the row selection from the column options
+col = st.selectbox('Select Column', cols)
+value = st.selectbox('Select Measure', measures)
+
+pivot_df = exams.pivot_table(index =row_select, columns=col, values=value, aggfunc='mean')
+
+st.write("Pivot Table")
+st.dataframe(pivot_df)  

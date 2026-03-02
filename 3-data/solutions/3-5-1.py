@@ -19,3 +19,18 @@ exams = pd.read_csv(url)
 st.write("Raw Exam Scores Data")
 st.dataframe(exams)
 
+options = ['Made_Own_Study_Guide', 'Did_Exam_Prep Assignment', 'Studied_In_Groups']
+selection = st.selectbox('Select a Study Approach', options)
+
+# group by the option
+# reset the index to turn the groupby object into a dataframe
+# rename the columns to be more descriptive
+# average the student score in each group
+
+summary = exams.groupby(selection).agg({'Class_Section': 'count', 'Student_Score': 'mean'})
+summary = summary.reset_index()
+summary = summary.rename(columns={'Class_Section': 'Student_Count', 'Student_Score': 'Average_Score'})
+
+
+st.write(f"Summary of Exam Scores by {selection}")
+st.dataframe(summary)
