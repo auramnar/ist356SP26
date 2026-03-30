@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-APIKEY = "ec25dc1e1297cfba51838bd3"
+APIKEY = "your_api_key_here"
 
 prompts = [
     "You are a helpful AI assistant. That speaks in emoji.",
@@ -39,6 +39,10 @@ if system_prompt: # only run if there is a prompt
     # React to user input
     prompt = st.chat_input("?")
     if prompt:
+        for message in st.session_state.messages:
+            with st.chat_message(message["role"]):
+                st.markdown(message["content"])
+            
 
         # Display user message in chat message container
         with st.chat_message("user"):
