@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-APIKEY = "your api_key_here"
+APIKEY = "d7bfb0c4cd88d3cf1581c1b2"
 
 prompts = [
     "You are a helpful AI assistant. That speaks in emoji.",
