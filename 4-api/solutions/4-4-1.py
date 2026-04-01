@@ -10,5 +10,3 @@ app = FastAPI()
 
 url = "https://raw.githubusercontent.com/mafudge/datasets/refs/heads/master/flights/sample-flights.csv"
 df =pd.read_csv(url)
-
-

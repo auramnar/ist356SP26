@@ -2,13 +2,15 @@
 
 from fastapi import FastAPI, Header, Query, HTTPException
 
-app = FastAPI()
+app = FastAPI() # initialize app with routes and endpoints
 
-@app.get("/calculator/{operator}")  # <== path parameter
-def read_item(operator: str, 
-              a: str = Query(),     # <== query parameter
-              b: int = Query(),     # <== query parameter
-              h: str = Header()):   # <== header parameter
+@app.get("/calculator/{operator}") # get end point with path parameter
+def read_item(
+    operator: str,
+    a: float = Query(),   # query parameter
+    b: float = Query(),   # 
+    h: str = Header(default=None)  # safer default
+):
     if operator == "add":
         result = a + b
     elif operator == "sub":
@@ -16,10 +18,15 @@ def read_item(operator: str,
     elif operator == "mul":
         result = a * b
     elif operator == "div":
+        if b == 0:
+            raise HTTPException(status_code=400, detail="Cannot divide by zero")
         result = a / b
     else:
-        raise HTTPException(status_code=404, detail="Operator not found. should be: add, sub, mul, div")
-    
+        raise HTTPException(
+            status_code=404,
+            detail="Operator not found. should be: add, sub, mul, div"
+        )
+
     return {
         "operator": operator,
         "a": a,

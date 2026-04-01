@@ -6,3 +6,7 @@ numpy
 pillow
 openpyxl
 lxml
+fastapi
+uvicorn
+playwright
+pytest-playwright
