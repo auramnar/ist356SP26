@@ -7,6 +7,8 @@ def run(playwright: Playwright) -> None:
     page = context.new_page()
     page.goto("https://www.imdb.com/chart/top/")
 
+    page.wait_for_selector("h3.ipc-title__text")
+    
     # outer element that contains the list of 250 top movies
     top_250_list = page.query_selector("ul.ipc-metadata-list")
 

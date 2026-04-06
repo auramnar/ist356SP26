@@ -7,17 +7,24 @@ def run(playwright: Playwright) -> None:
     page = context.new_page()
     page.goto("https://www.imdb.com/chart/top/")
 
-    # Let's scrape the heading off the page!
-    heading = page.query_selector("h1")
+    # wait for heading to appear
+    page.wait_for_selector("h1")
 
+    # correct selector (class names need dots)
+    heading = page.query_selector("h1.")
+    # spaces which means "descendant selector"
+    # "h1.ipc-title__text chart-layout-specific-title-text" was interpreted as:
+    # chart-layout-specific-title-text inside h1.ipc-title__text (doesn't exist)
+    # Alternatively we could use heading = page.locator("h1").first
+    # more stable than relying on class names which can change
+    
     # the tag name of the element
-    tag =heading.evaluate("el => el.tagName")
+    tag = heading.evaluate("el => el.tagName")
     print(tag)
 
     # the contents of the element
     print(heading.inner_text())
     
-    # ---------------------
     context.close()
     browser.close()
 

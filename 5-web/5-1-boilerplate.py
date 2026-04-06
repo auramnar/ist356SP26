@@ -1,6 +1,6 @@
 from playwright.sync_api import Playwright, sync_playwright, expect
 
-# Function performa the browser automation tasks
+# Function perform the browser automation tasks
 def run(playwright: Playwright) -> None:
     browser = playwright.chromium.launch(headless=False) #  # Launch the Chromium browser (headless=False shows the browser window)
     context = browser.new_context() # create a new browser context
