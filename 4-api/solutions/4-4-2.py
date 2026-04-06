@@ -8,6 +8,7 @@ def tldr_openai(text):
     headers = {
         "X-API-KEY" : apikey
     }
+
     data = [
         {
             "role": "system",
@@ -60,5 +61,8 @@ def tldr(text: str = Body(embed=True)):
         raise HTTPException(status_code=400, detail=str(e))
 
 
-if __name__ == '__main__'
- 
+if __name__ == '__main__':
+    import uvicorn
+    uvicorn.run(app, host="localhost", port=8000)
+    
+# http://localhost:8000/tldr
