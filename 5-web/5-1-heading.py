@@ -11,7 +11,7 @@ def run(playwright: Playwright) -> None:
     page.wait_for_selector("h1")
 
     # correct selector (class names need dots)
-    heading = page.query_selector("h1.")
+    heading = page.query_selector("h1.ipc-title__text")
     # spaces which means "descendant selector"
     # "h1.ipc-title__text chart-layout-specific-title-text" was interpreted as:
     # chart-layout-specific-title-text inside h1.ipc-title__text (doesn't exist)
