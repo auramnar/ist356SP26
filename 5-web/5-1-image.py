@@ -30,4 +30,4 @@ def run(playwright: Playwright) -> None:
 with sync_playwright() as playwright:
     run(playwright)
     
-download_image("https://a.espncdn.com/photo/2025/1111/r1574203_1296x729_16-9.jpg")
+download_image("https://a.espncdn.com/photo/2026/0322/r1632098_1296x729_16-9.jpg")
