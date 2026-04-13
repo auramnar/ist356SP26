@@ -30,7 +30,8 @@ def course_scraper(playwright: Playwright, course: str):
     # Wait for the course detail page to load
     page.wait_for_load_state("networkidle") # wait until no more request are happening
     sleep(2)
-
+    # “If the title element exists on the page, extract its text.
+    #Otherwise, set the title to 'N/A'.
     # Extract course info from the actual course page
     # check if an element in the css selector used for tile exists
     # if found get its inner text 
@@ -83,7 +84,16 @@ with sync_playwright() as playwright:
 # run the function with the input
 # close browser automatically
 
-
+if __name__ == "__main__":
+    courses = "IST 256, IST 387, IST 101, IST 356"
+    course_data =  []
+    with sync_playwright() as playwright:
+        for course in courses.split(","):
+            course_dict = course_scraper(playwright, course.strip())
+            course_data.append(course_dict)
+            print(course)
+    with open("./5-web/cache/course_data.json", "w") as f:
+        json.dump(course_data, f, indent=2)
 
 
 
