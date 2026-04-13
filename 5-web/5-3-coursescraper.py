@@ -22,6 +22,10 @@ def course_scraper(playwright: Playwright, course) -> dict:
 
         course_selector = page1.query_selector("table")
         course_text = course_selector.inner_text()
+<<<<<<< HEAD
+=======
+
+>>>>>>> 56b06fa1f11fdfa8eebc888f7135d7aa2d561365
         #print(course_text)
         #exit() # stop program here to see text content of  course page before we close the browser
         # to find the line numbers
@@ -29,6 +33,10 @@ def course_scraper(playwright: Playwright, course) -> dict:
         #for i, line in enumerate(lines):
             #print(i, line)
         #exit()
+<<<<<<< HEAD
+=======
+
+>>>>>>> 56b06fa1f11fdfa8eebc888f7135d7aa2d561365
     # ---------------------
     context.close()
     browser.close()
