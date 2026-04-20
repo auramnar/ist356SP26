@@ -15,5 +15,18 @@ import streamlit as st
 
 
 mobile = pd.read_csv("./6-viz/data/mobile_user_behavior_dataset.csv")
-st.dataframe(mobile)
+plot, series = plt.subplots()
 
+category = st.selectbox("Select a category:", ["Gender", "Operating System"])
+measure = st.selectbox("Select a measure:", ["Data Usage (MB/day)", "Battery Drain (mAh/day)", "Screen On Time (hours/day)", "App Usage Time (minutes/day)"])
+
+
+st.dataframe(mobile)
+sns.barplot(data=mobile,
+            x = category,
+            y = measure,
+            estimator="mean",
+            errorbar= None, 
+            ax=series).set_title("Average Data Usage")
+st.pyplot(plot)      
+            

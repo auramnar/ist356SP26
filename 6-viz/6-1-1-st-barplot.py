@@ -9,9 +9,11 @@ figure, series1 = plt.subplots()
 # create a Matplotlib figure and a set of axes series1
 # the figure is the top-level container for all plot elements
 # the axes is the area on which data is plotted
-sns.barplot(data=pengo, x="species", 
+sns.barplot(data=pengo, 
+            x="sex", 
             y="flipper_length_mm", 
-            hue="sex", 
-            estimator="mean",
+            hue="island", 
+            estimator="sum",
+            errorbar= None,
             ax=series1).set_title("Total Count by Species")
 st.pyplot(figure) # use the Streamlit function to render the plot

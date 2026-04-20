@@ -9,7 +9,7 @@ st.caption("The strategy is to call the playwright code as a python script")
 year = st.number_input("Enter a year", min_value=2010, max_value=2025, value=2023)
 if year:
     with st.spinner("Scraping..."):
-        html_content = run_python_script("5-web/solutions/5-2-2a.py", str(year))
+        html_content = run_python_script("5-web/solutions/5-2-2v2.py", str(year))
         df = pd.read_html(html_content)[0]
 
         st.dataframe(df)

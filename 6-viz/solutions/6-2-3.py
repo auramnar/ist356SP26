@@ -24,3 +24,18 @@ import numpy as np
 ff = pd.read_csv("./6-viz/data/fast_food_nutrition_cleaned.csv")
 print(ff.columns)
 
+companies = sorted(list(ff['company'].unique()))
+print(companies)
+
+value = st.selectbox("Select Macronutrient", ['fat_g', 'carbs_g', 'sugars_g', 'protein_g', 'sodium_mg'])
+
+ffp = ff.pivot_table(index='company', columns='calories',values=value, aggfunc=np.mean)
+
+figure, series1 = plt.subplots(figsize=(20, 15))
+sns.heatmap(
+    ffp, 
+    ax=series1, 
+    cmap="YlOrRd",      # 🔥 Heat-style palette (good for nutrients)
+    linewidths=.3, 
+    annot=False)
+st.pyplot(figure)
