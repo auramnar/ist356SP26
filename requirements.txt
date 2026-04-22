@@ -10,3 +10,8 @@ fastapi
 uvicorn
 playwright
 pytest-playwright
+seaborn
+geopandas[all]
+mapclassify
+folium
+streamlit-folium

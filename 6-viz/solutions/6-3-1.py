@@ -16,9 +16,8 @@ days  = {
 
 st.title('Streamlit Park magic')
 
-st.title('Streamlit Park magic')
 
-map = folium.Map(location=[43.0481, -76.1474], zoom_start=15) # create a folium map centered at Syracuse
+map = folium.Map(location=[43.0481, -76.1474], zoom_start=15) # create a Folium map centered at Syracuse
 df = pd.read_csv('./6-viz/data/final_cuse_parking_violations.csv')
 df_dropped = df.dropna() # remove rows with missing data
 status = df_dropped['status'].unique() # extract all unique status values
@@ -28,6 +27,7 @@ status = st.selectbox('Select ticket status: ', status) # create a dropdown for 
 df_filtered = df_dropped[df_dropped['status'] == status] # filter dataframe based on status
 
 df_sample = df_filtered.sample(10) 
+st.dataframe(df_sample) # display the sample dataframe
 
 for i, row in df_sample.iterrows():
     lat, lon = row['coords'].strip("(").strip(")").split(',') # a string, remove parens, and seperate into lon and lat

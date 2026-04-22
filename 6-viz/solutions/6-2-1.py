@@ -22,7 +22,11 @@ ff = pd.read_csv("./6-viz/data/fast_food_nutrition_cleaned.csv")
 bins = st.slider("Select the number of bins", min_value=1, max_value=100)
 st.write(f"Number of bins: {bins}")
 figure, series1 = plt.subplots()
-sns.histplot(data=ff, x="calories", bins=bins, kde=True, ax=series1).set_title("Calories Histogram")
+sns.histplot(data=ff, 
+             x="calories", 
+             bins=bins, 
+             kde=True, 
+             ax=series1).set_title("Calories Histogram")
 st.pyplot(figure)
 
 

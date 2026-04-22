@@ -27,7 +27,7 @@ c2 = st.selectbox("Select Company 2", companies)
 
 ff_filtered = ff[(ff['company'] == c1) | (ff['company'] == c2)]
 
-figure, series1 = plt.subplots()
+#figure, series1 = plt.subplots()
 figure = sns.lmplot(data=ff_filtered, x="calories", y='sodium_mg', hue='company')
 st.pyplot(figure)
 
