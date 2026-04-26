@@ -216,7 +216,7 @@ Syracuse University has a variety of other policies designed to guarantee that s
 |   | Web Scraping 5-4 | Data Visualization 6- 1 & 6-2  |  |
 | 14 | 4/13 | 4/15 | 4/19 |
 |   | Data Visualization 6-3 | Data Visualization 6-4 | Assignment 7 (A7) |
-| 15 | 4/20 | 4/22 | 4/26 |
+| 15 | 4/20 | 4/22 | 4/27 |
 |   | Data Visualization 6-5 | Data Visualization |  Assignment 8 (A8) |
 | 16 | 4/27 | 4/30 | 5/5 |
 |   | Exam 2 | CHECKPOINT III/Project Draft Deliverable  |  Project |
